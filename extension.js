@@ -2,7 +2,7 @@ import Clutter from 'gi://Clutter';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as OverviewControls from 'resource:///org/gnome/shell/ui/overviewControls.js';
 
-export default class DoubleClickApps {
+export default class DoubleClickApps extends Extension {
     enable() {
         this._doubleClickGesture = new Clutter.ClickGesture();
         this._doubleClickGesture.set_n_clicks_required(2)
