@@ -1,0 +1,10 @@
+{
+  "name": "Double Click Activities to App Grid",
+  "description": "Open the application grid by double clicking the activities button similarly to the super key.",
+  "uuid": "gnome-doubleclick-appgrid@jordanbrotherton.github.io",
+  "url": "https://github.com/jordanbrotherton/gnome-doubleclick-appgrid",
+  "version": 1,
+  "shell-version": [
+    "49"
+  ]
+}
