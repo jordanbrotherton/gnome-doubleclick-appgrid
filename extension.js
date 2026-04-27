@@ -26,7 +26,6 @@ export default class DoubleClickApps extends Extension {
                 this._doubleClickGesture.disconnect(this._handlerId);
                 this._handlerId = null;
             }
-            this._doubleClickGesture.run_dispose();
             this._doubleClickGesture = null;
         }
     }
