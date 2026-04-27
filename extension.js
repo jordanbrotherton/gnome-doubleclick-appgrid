@@ -8,7 +8,7 @@ export default class DoubleClickApps extends Extension {
         this._doubleClickGesture = new Clutter.ClickGesture();
         this._doubleClickGesture.set_n_clicks_required(2);
 
-        this._doubleClickGesture.connect('recognize', () => {
+        this._handlerId = this._doubleClickGesture.connect('recognize', () => {
           if (Main.overview.visible) {
               const checked = Main.overview.dash.showAppsButton.checked;
               Main.overview.dash.showAppsButton.checked = !checked;
@@ -22,7 +22,12 @@ export default class DoubleClickApps extends Extension {
     disable() {
         if (this._doubleClickGesture) {
             Main.panel.statusArea['activities']?.remove_action(this._doubleClickGesture);
-            delete this._doubleClickGesture;
+            if (this._handlerId) {
+                this._doubleClickGesture.disconnect(this._handlerId);
+                this._handlerId = null;
+            }
+            this._doubleClickGesture.run_dispose();
+            this._doubleClickGesture = null;
         }
     }
 }
