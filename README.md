@@ -5,6 +5,7 @@ Open the application grid by double clicking the activities button similarly to 
 ## Supported GNOME versions.
 * GNOME 49
 * GNOME 50
+* GNOME 51
 
 ## Install
 [<img src="assets/get-it-on-ego.png" height="100" alt="Get it on GNOME Extensions">](https://extensions.gnome.org/extension/9339/double-click-activities-to-app-grid/)
